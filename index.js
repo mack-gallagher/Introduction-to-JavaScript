@@ -157,11 +157,11 @@ function hungryDog(weight, age){
     if (age < twoMonths) {
       console.log("Dog age must be greater than 2 months [.17 years].");
       return;
-    } else if (twoMonths >= age && age < fourMonths) {
+    } else if (age >= twoMonths && age < fourMonths) {
       poundsFood = weight*.1;
-    } else if (fourMonths >= age && age < sevenMonths) {
+    } else if (age >= fourMonths && age < sevenMonths) {
       poundsFood = weight*.05;
-    } else if (sevenMonths >= age && age < 1) {
+    } else if (age >= sevenMonths && age < 1) {
       poundsFood = weight*.04;
     } else {
       return;
@@ -283,8 +283,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  return kilometers*.621371;
 }
 
 
@@ -297,8 +297,8 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48;
 }
 
 
