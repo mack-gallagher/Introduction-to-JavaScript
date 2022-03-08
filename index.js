@@ -93,8 +93,8 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age*7;
 }
 
 
@@ -145,8 +145,46 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age){
+  
+  let poundsFood;
+
+  const twoMonths = .17 // years
+  const fourMonths = .33 // years
+  const sevenMonths = .58 // years
+
+  if (age < 1) {
+    if (age < twoMonths) {
+      console.log("Dog age must be greater than 2 months [.17 years].");
+      return;
+    } else if (twoMonths >= age && age < fourMonths) {
+      poundsFood = weight*.1;
+    } else if (fourMonths >= age && age < sevenMonths) {
+      poundsFood = weight*.05;
+    } else if (sevenMonths >= age && age < 1) {
+      poundsFood = weight*.04;
+    } else {
+      return;
+    } 
+  } else if (age >= 1) {
+    if (!(weight >= 0)) {
+      console.log("Dog weight in pounds must be greater than 0.");
+      return;
+    } else if (weight >= 0 && weight < 5) {
+      poundsFood = weight*.05;
+    } else if (weight >= 5 && weight < 10) {
+      poundsFood = weight*.04;
+    } else if (weight >= 10 && weight < 15) {
+      poundsFood = weight*.03;
+    } else if (weight >= 15) {
+      poundsFood = weight*.02;
+    }
+  } else {
+    console.log("usage: hungryDog(number weight, number age)");
+    return;
+  }
+  
+  return poundsFood;
 }
 
 
