@@ -16,10 +16,9 @@ Task 1a - Voting Age (not auto tested)
 Do the following:   
    1. Create a variable called votingAge and assign it a number value
    2. Console log true if age is 18 or higher
-
+{
    HINT: no function required
 */
-
 
 
 /*
@@ -61,8 +60,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a,b){
+  return a*b;
 }
 
 
