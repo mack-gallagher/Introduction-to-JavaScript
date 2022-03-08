@@ -20,6 +20,12 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 18
+
+if (age >= 18) {
+  console.log(true);
+}
+
 
 /*
 Task 1b - Values (not auto tested)
@@ -34,7 +40,14 @@ Do the following:
 */
 
 
+const firstThing = 'grapes';
+const secondThing = 'potatoes';
 
+if (firstThing === secondThing) {
+  firstThing = 'salt';
+}
+
+console.log(firstThing);
 
 
 /*
@@ -49,6 +62,10 @@ Do the following:
 */
 
 
+const num = "1999";
+
+const realnum = Number(num);
+console.log(realnum);
 
 
 /*
