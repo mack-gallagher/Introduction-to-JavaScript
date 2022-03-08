@@ -210,8 +210,64 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
+let computerChoice;
+let computerNum = Math.floor(Math.random() * 3);
+switch (computerNum) {
+  case 0:
+    computerChoice = 'paper';
+    break;
+  case 1:
+    computerChoice = 'scissors';
+    break;
+  case 2:
+    computerChoice = 'rock';
+    break;
+  default:
+    console.log("???");
+}
+
 function game(user, computer){
-  /*add your code here*/
+
+  const userErrorMsg = "User input must be 'paper', 'scissors', or 'rock'.";
+  const computerErrorMsg = "Something went wrong with our AI, sorry!";
+
+  if (user === 'paper') {
+    if (computer === 'paper') {
+      return "it's a tie";
+    } else if (computer === 'scissors') {
+      return "you lose!";
+    } else if (computer === 'rock') {
+      return "you win!";
+    } else {
+      console.log(computerErrorMsg);
+      return;
+    } 
+  } else if (user === 'scissors') {
+    if (computer === 'paper') {
+      return "you win!";
+    } else if (computer === 'scissors') {
+      return "it's a tie";
+    } else if (computer === 'rock') {
+      return "you lose!";
+    } else {
+      console.log(computerErrorMsg);
+      return;
+    }
+  } else if (user === 'rock') {
+    if (computer === 'paper') {
+      return 'you lose!';
+    } else if (computer === 'scissors') {
+      return 'you win!';
+    } else if (computer === 'rock') {
+      return "it's a tie";
+    } else {
+      console.log(computerErrorMsg);
+      return;
+    }
+  } else {
+    console.log(userErrorMsg);
+    return;
+  }
 }
 
 
